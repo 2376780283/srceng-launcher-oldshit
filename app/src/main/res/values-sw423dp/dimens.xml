@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <!-- 320 / 423 ≈ 0.756 -->
+    <dimen name="item_tile_bigtext">38sp</dimen>
+    <dimen name="item_tile_smalltext">18sp</dimen>
+    <dimen name="max_right_tab_widgh">80dp</dimen>
+    <dimen name="custom_tab_icon_size">54dp</dimen>
+    <dimen name="start_button_high">50dp</dimen>
+    <dimen name="start_button_width">200dp</dimen>
+    <dimen name="start_button_text_start">17sp</dimen>
+    <dimen name="start_button_icons_start">19sp</dimen>
+    <dimen name="set_button_size_high">50dp</dimen>
+    <dimen name="set_checkbox_highsize_b">20dp</dimen>
+    <dimen name="set_editbox_high">33dp</dimen>
+    <dimen name="tile_act_high">200dp</dimen>
+    <dimen name="tile_act_widgh">350dp</dimen>
+    
+    <dimen name="layout_page_rl">5dp</dimen>
+    <dimen name="layout_page_tm">5dp</dimen>
+    <dimen name="layout_page_padding">5dp</dimen>
+    <dimen name="layout_page_padding_all">10dp</dimen>
+    <dimen name="small_page_text_sizes">8sp</dimen>
+    <dimen name="smallrh_page_text_sizes">8sp</dimen>
+    <dimen name="medium_page_text_sizes">11sp</dimen>
+    <dimen name="mediumsmall_page_text_sizes">10sp</dimen>
+    <dimen name="layout_page_options_edit_lmt">5dp</dimen>
+    <dimen name="layout_page_options_edit_pd">10dp</dimen>
+    <dimen name="config_icons_size">25dp</dimen>
+    <dimen name="design_tab_scrollable_min_width">72dp</dimen>
+    <dimen name="design_tab_max_width">264dp</dimen>
+    <dimen name="design_tab_text_size">14sp</dimen>
+    <dimen name="design_tab_text_size_2line">12sp</dimen>
+    <!-- Vertical tablayout_Control -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Padding -->
+    <dimen name="padding_tiny">1dp</dimen>
+    <dimen name="padding_small">2dp</dimen>
+    <dimen name="padding_medium">4dp</dimen>
+    <dimen name="padding_moderate">6dp</dimen>
+    <dimen name="padding_heavy">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_extra_large">24dp</dimen>
+    <dimen name="padding_extra_extra_large">32dp</dimen>
+    <!-- Input text padding -->
+    <dimen name="padding_input_bottom">@dimen/padding_heavy</dimen>
+    <dimen name="padding_input_top">11dp</dimen>
+    <!-- Main Activity components -->
+    <dimen name="empty_icon_width">60dp</dimen>
+    <dimen name="empty_icon_height">60dp</dimen>
+    <dimen name="navigation_header_height">160dp</dimen>
+    <dimen name="navigation_item_height">48dp</dimen>
+    <dimen name="navigation_item_icon_size">40dp</dimen>
+      <dimen name="max_pad_width">192dp</dimen>
+    <!-- Fragment padding -->
+    <dimen name="fragment_padding_medium">10dp</dimen>
+    <!-- Misc paddings -->
+    <dimen name="profile_editor_image_padding">@dimen/padding_small</dimen>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:layout_margin="3dp"
+     app:cardBackgroundColor="@color/primary_material_dark"
+     app:cardCornerRadius="2dp">
+
+    <ImageView
+         android:layout_height="@dimen/empty_icon_height"
+         android:layout_width="@dimen/empty_icon_height"
+         android:scaleType="centerCrop"
+         android:layout_gravity="center"
+         android:id="@+id/tile_image" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:orientation="vertical"
+         android:layout_gravity="bottom|end">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="2dp"
+             android:textSize="@dimen/medium_page_text_sizes"
+             android:fontFamily="@font/small_round"
+             android:textColor="@color/primary_material_light"
+             android:layout_marginStart="@dimen/layout_page_padding"
+             android:id="@+id/tile_text" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="2dp"
+             android:textSize="@dimen/small_page_text_sizes"
+             android:fontFamily="@font/linux_xin_zzh"
+             android:textColor="@color/primary_material_light"
+             android:layout_marginStart="@dimen/layout_page_padding"
+             android:id="@+id/tile_text_s" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

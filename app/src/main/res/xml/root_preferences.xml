@@ -1,0 +1,16 @@
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/daily">
+
+        <!-- <ListPreference android:defaultValue="@string/format_0" android:entries="@array/date_time_entries" android:entryValues="@array/date_time_values" android:key="date_time_preference" app:summary="@string/format_0" android:title="日期时间格式" app:iconSpaceReserved="false" /> -->
+
+        <com.liuxing.daily.view.CustomYearMonthSwitchPreference />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

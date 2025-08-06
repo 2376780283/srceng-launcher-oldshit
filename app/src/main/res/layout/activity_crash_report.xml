@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:padding="8dp"
+     android:orientation="horizontal">
+
+    <androidx.recyclerview.widget.RecyclerView
+         android:layout_height="match_parent"
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:id="@+id/recycler_view" />
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:orientation="vertical">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:textSize="16sp"
+             android:paddingBottom="8dp"
+             android:textColor="@android:color/black"
+             android:text="崩溃了 如果重新启动应用程序还停留在这个界面 请返回便可退出" />
+
+        <ScrollView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent">
+
+            <TextView
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:textSize="12sp"
+                 android:hint="错误日志未加载"
+                 android:textColor="@android:color/holo_red_dark"
+                 android:id="@+id/errorDetailsTextView" />
+
+        </ScrollView>
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:id="@+id/restartButton"
+             android:text="Restart App" />
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:id="@+id/sendFeedbackButton"
+             android:text="Send Feedback" />
+
+    </LinearLayout>
+
+</LinearLayout>

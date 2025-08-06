@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:layout_margin="@dimen/padding_heavy"
+     android:background="@drawable/card_bg_black"
+     app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent">
+
+        <ImageView
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:scaleType="centerCrop"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintBottom_toBottomOf="parent"
+             android:id="@+id/tile_image" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="44dp"
+             app:layout_constraintStart_toStartOf="parent"
+             android:textSize="@dimen/item_tile_bigtext"
+             android:fontFamily="@font/small_round"
+             android:textColor="@color/primary_material_light"
+             app:layout_constraintBottom_toBottomOf="parent"
+             android:layout_marginStart="22dp"
+             android:id="@+id/tile_text" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="25dp"
+             app:layout_constraintStart_toStartOf="parent"
+             android:textSize="@dimen/item_tile_smalltext"
+             android:fontFamily="@font/linux_xin_zzh"
+             android:textColor="@color/primary_material_light"
+             app:layout_constraintBottom_toBottomOf="parent"
+             android:layout_marginStart="25dp"
+             android:id="@+id/tile_text_s"
+             android:text="Test 如果没有加载出来 肯定是出了bug" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

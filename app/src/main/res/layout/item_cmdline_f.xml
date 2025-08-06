@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:padding="@dimen/padding_medium"
+    android:background="@drawable/card_bg_black"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_height="@dimen/set_checkbox_highsize_b"
+        android:layout_width="@dimen/set_checkbox_highsize_b"
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/icon" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/padding_moderate">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/small_round"
+            android:textSize="@dimen/small_page_text_sizes"
+            android:textColor="@color/apple_switch_thumb_color"
+            android:id="@+id/text_view_item"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:padding="@dimen/layout_page_tm">
+
+    <ImageView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:scaleType="centerCrop"
+         android:src="@drawable/background"
+         android:id="@+id/tile_image" />
+
+    <FrameLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+         android:background="@android:color/transparent"
+         android:id="@+id/bottom_sheet"
+         android:layout_gravity="bottom">
+
+        <com.zzh.widget.blurview.BlurView
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:layout_gravity="center"
+             android:id="@+id/blurView">
+
+            <LinearLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:padding="@dimen/layout_page_padding"
+                 android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent">
+
+                    <com.google.android.material.button.MaterialButton
+                         android:layout_height="@dimen/start_button_high"
+                         android:layout_width="@dimen/start_button_width"
+                         app:iconSize="@dimen/start_button_icons_start"
+                         android:textSize="@dimen/start_button_text_start"
+                         app:iconTint="@color/colorPrimary_light"
+                         android:textColor="#FFFFFF"
+                         app:icon="@drawable/ic_play_steam"
+                         android:background="@drawable/start_botton"
+                         app:layout_constraintTop_toTopOf="parent"
+                         android:layout_margin="8dp"
+                         app:layout_constraintStart_toStartOf="parent"
+                         android:id="@+id/ButtonLaunch"
+                         app:iconGravity="textStart"
+                         android:text="@string/srceng_launcher_launch" />
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         app:layout_constraintTop_toTopOf="parent"
+                         android:orientation="horizontal"
+                         android:layout_marginLeft="8dp"
+                         app:layout_constraintStart_toEndOf="@id/ButtonLaunch"
+                         android:layout_marginTop="8dp"
+                         android:id="@+id/timeInfo">
+
+                        <ImageView
+                             android:layout_height="@dimen/config_icons_size"
+                             android:layout_width="@dimen/config_icons_size"
+                             android:src="@drawable/outline_clock" />
+
+                        <LinearLayout
+                             android:layout_height="match_parent"
+                             android:layout_width="wrap_content"
+                             android:orientation="vertical"
+                             android:layout_marginLeft="8dp">
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:fontFamily="@font/small_round"
+                                 android:textSize="@dimen/mediumsmall_page_text_sizes"
+                                 android:text="@string/out_time" />
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:fontFamily="@font/small_round"
+                                 android:textSize="@dimen/mediumsmall_page_text_sizes"
+                                 android:id="@+id/outtime"
+                                 android:text="loading...." />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         app:layout_constraintTop_toTopOf="parent"
+                         android:orientation="horizontal"
+                         android:layout_marginLeft="8dp"
+                         app:layout_constraintStart_toEndOf="@id/timeInfo"
+                         android:layout_marginTop="8dp"
+                         android:id="@+id/playTimeInfo">
+
+                        <ImageView
+                             android:layout_height="@dimen/config_icons_size"
+                             android:layout_width="@dimen/config_icons_size"
+                             android:src="@drawable/ic_playertime" />
+
+                        <LinearLayout
+                             android:layout_height="match_parent"
+                             android:layout_width="wrap_content"
+                             android:orientation="vertical"
+                             android:layout_marginLeft="8dp">
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:fontFamily="@font/small_round"
+                                 android:textSize="@dimen/mediumsmall_page_text_sizes"
+                                 android:text="@string/playtimer" />
+
+                            <TextView
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 android:fontFamily="@font/small_round"
+                                 android:textSize="@dimen/mediumsmall_page_text_sizes"
+                                 android:id="@+id/playtimer"
+                                 android:text="loading...." />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                         android:layout_height="@dimen/config_icons_size"
+                         android:layout_width="@dimen/config_icons_size"
+                         android:src="@drawable/ic_setting"
+                         android:background="@drawable/start_botton"
+                         android:layout_margin="10dp"
+                         android:scaleType="fitCenter"
+                         android:layout_marginTop="8dp"
+                         app:layout_constraintEnd_toEndOf="parent"
+                          app:layout_constraintTop_toTopOf="parent"
+                         android:id="@+id/rightButton"/>
+                          
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="@dimen/sp_25"
+                     android:fontFamily="@font/linux_xin_zzh"
+                     android:id="@+id/UserIDView" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="@dimen/design_tab_text_size_2line"
+                     android:fontFamily="@font/linux_xin_zzh"
+                     android:text="@string/app_name" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="@dimen/design_tab_text_size_2line"
+                     android:fontFamily="@font/linux_xin_zzh"
+                     android:id="@+id/Achievement_Environment" />
+
+                <com.zzh.widget.progressbar.ProgressBarRoundNormal
+                     android:layout_height="@dimen/navigation_header_height"
+                     android:layout_width="@dimen/navigation_header_height"
+                     android:id="@+id/achievement_view" />
+
+            </LinearLayout>
+
+        </com.zzh.widget.blurview.BlurView>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

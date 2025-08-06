@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="@dimen/layout_page_padding"
+    android:orientation="horizontal">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:id="@+id/motd_view" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        app:cardBackgroundColor="@color/spin_color"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp">
+       <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" 
+        android:layout_gravity="right">
+        <com.google.android.material.tabs.TabLayout
+            android:layout_height="@dimen/navigation_item_height"
+            android:layout_width="match_parent"
+            app:tabMode="fixed"
+            android:background="@drawable/card_bg_black"
+            app:tabIndicatorColor="@color/bilibili_pink"
+            app:tabGravity="center"
+            android:elevation="20dp"
+            app:tabTextAppearance="@style/pic_manager_layout_style"
+            android:id="@+id/tab_opt"
+            app:tabRippleColor="@android:color/transparent"
+            android:layout_gravity="top" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/viewPager_opt" />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

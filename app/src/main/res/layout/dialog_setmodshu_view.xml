@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@drawable/card_bg_black"
+     android:padding="16dp"
+     android:orientation="vertical">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:textSize="@dimen/start_button_icons_start"
+         android:fontFamily="@font/small_round"
+         android:textColor="@color/apple_switch_track_color"
+         android:id="@+id/dialog_modinfo_title"
+         android:text="Mod Title" />
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:padding="2sp"
+         android:orientation="horizontal">
+
+        <ImageView
+             android:layout_height="@dimen/tile_act_widgh"
+             android:layout_width="0dp"
+             android:layout_marginEnd="16dp"
+             android:scaleType="centerCrop"
+             android:layout_weight="2"
+             android:id="@+id/c_imageView" />
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="0dp"
+             android:orientation="vertical"
+             android:layout_weight="1">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="@dimen/design_tab_text_size"
+                 android:fontFamily="@font/din1451alt"
+                 android:textColor="@color/bilibili_pink"
+                 android:layout_marginTop="8dp"
+                 android:id="@+id/dialog_modinfo_description" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="@dimen/medium_page_text_sizes"
+                 android:fontFamily="@font/linux_xin_zzh"
+                 android:textColor="@color/apple_switch_track_color"
+                 android:layout_marginTop="@dimen/padding_large"
+                 android:id="@+id/dialog_modinfo_description_uer" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="@dimen/medium_page_text_sizes"
+                 android:fontFamily="@font/linux_xin_zzh"
+                 android:textColor="@color/apple_switch_track_color"
+                 android:layout_marginTop="@dimen/padding_small"
+                 android:id="@+id/dialog_modinfo_description_ver" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="@dimen/medium_page_text_sizes"
+                 android:fontFamily="@font/linux_xin_zzh"
+                 android:textColor="@color/apple_switch_track_color"
+                 android:layout_marginTop="@dimen/padding_small"
+                 android:id="@+id/dialog_modinfo_description_dep" />
+
+  
+            <RelativeLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:gravity="bottom">
+
+                <include
+                     layout="@layout/dialog_setmodshu_button" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

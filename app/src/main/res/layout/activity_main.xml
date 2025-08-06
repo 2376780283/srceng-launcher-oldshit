@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/Main_background">
+
+    <!-- 左侧的 Tab 和 图标部分 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="@dimen/max_right_tab_widgh"
+        android:background="@color/primary_material_dark"
+        android:id="@+id/body_main">
+
+        <!-- VerticalTabLayout 位于顶部 -->
+        <com.zzh.widget.tablayout.VerticalTabLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:tabMode="auto"
+            app:tabRippleColor="@color/hl_color"
+            app:tabIndicator="@drawable/tab_indicator"
+            app:tabTextColor="@color/white"
+            app:tabGravity="center"
+            app:tabTextAppearance="@style/pic_manager_layout_style"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/verticalTabLayout" />
+
+        <!-- 底部的图标和信息 -->
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/config_icons_size"
+                android:layout_height="@dimen/config_icons_size"
+                android:src="@drawable/ic_return"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/small_round"
+                android:textSize="@dimen/mediumsmall_page_text_sizes"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/game_dir_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/small_round"
+                android:textSize="@dimen/mediumsmall_page_text_sizes"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/game_size"
+                android:text="loading...." />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- ViewPager2 放在右侧，匹配屏幕剩余空间 -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/body_main"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

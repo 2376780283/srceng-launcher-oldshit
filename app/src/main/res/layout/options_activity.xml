@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="@dimen/layout_page_padding">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/options_activity_textl_background"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:padding="@dimen/layout_page_padding_all"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/small_page_text_sizes"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:text="@string/srceng_launcher_command_args" />
+
+            <AutoCompleteTextView
+                android:layout_height="@dimen/set_editbox_high"
+                android:layout_width="match_parent"
+                android:imeOptions="flagNoExtractUi"
+                android:padding="@dimen/layout_page_options_edit_pd"
+                android:textSize="@dimen/medium_page_text_sizes"
+                android:textColor="@color/primary_material_light"
+                android:layout_marginTop="@dimen/layout_page_options_edit_lmt"
+                android:layout_marginBottom="@dimen/layout_page_options_edit_lmt"
+                android:background="@drawable/tab_home_nvg_bg"
+                android:backgroundTint="@color/hl_color"
+                android:maxLines="1"
+                android:inputType="text"
+                android:id="@+id/edit_cmdline"
+                android:text="-high" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/small_page_text_sizes"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:text="@string/srceng_launcher_env" />
+
+            <EditText
+                android:layout_height="@dimen/set_editbox_high"
+                android:layout_width="match_parent"
+                android:imeOptions="flagNoExtractUi"
+                android:padding="@dimen/layout_page_options_edit_pd"
+                android:textSize="@dimen/medium_page_text_sizes"
+                android:textColor="@color/primary_material_light"
+                android:layout_marginTop="@dimen/layout_page_options_edit_lmt"
+                android:layout_marginBottom="@dimen/layout_page_options_edit_lmt"
+                android:background="@drawable/tab_home_nvg_bg"
+                android:backgroundTint="@color/hl_color"
+                android:maxLines="1"
+                android:inputType="text"
+                android:id="@+id/edit_env"
+                android:text="LIBGL_USEVBO=0" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/small_page_text_sizes"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:text="@string/srceng_launcher_game_path" />
+
+            <EditText
+                android:layout_height="@dimen/set_editbox_high"
+                android:layout_width="match_parent"
+                android:imeOptions="flagNoExtractUi"
+                android:padding="@dimen/layout_page_options_edit_pd"
+                android:textSize="@dimen/medium_page_text_sizes"
+                android:textColor="@color/primary_material_light"
+                android:layout_marginTop="@dimen/layout_page_options_edit_lmt"
+                android:layout_marginBottom="@dimen/layout_page_options_edit_lmt"
+                android:background="@drawable/tab_home_nvg_bg"
+                android:backgroundTint="@color/hl_color"
+                android:maxLines="1"
+                android:inputType="text"
+                android:id="@+id/edit_gamepath"
+                android:text="/sdcard/srceng/" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_page_tm"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/small_page_text_sizes"
+                android:layout_marginLeft="@dimen/layout_page_rl"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/layout_page_tm"
+                android:text="@string/tab_source_setlogsize" />
+
+            <SeekBar
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_page_tm"
+                android:max="30"
+                android:secondaryProgress="15"
+                android:background="@null"
+                android:splitTrack="false"
+                android:layout_marginTop="@dimen/layout_page_tm"
+                android:progressDrawable="@drawable/tab_home_nvg_bg"
+                android:id="@+id/set_logview_textsize" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/smallrh_page_text_sizes"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="3dp"
+                    android:scaleX="0.92"
+                    android:scaleY="0.92"
+                    android:id="@+id/checkbox_immersive_mode"
+                    android:text="@string/srceng_launcher_immersive_mode" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/smallrh_page_text_sizes"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="3dp"
+                    android:id="@+id/checkbox_play_video"
+                    android:scaleX="0.92"
+                    android:scaleY="0.92"
+                    android:text="@string/play_video" />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/smallrh_page_text_sizes"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="3dp"
+                    android:id="@+id/checkbox_play_padui"
+                    android:scaleX="0.92"
+                    android:scaleY="0.92"
+                    android:text="@string/launcher_mod_padui" />
+            </LinearLayout>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/small_page_text_sizes"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:text="@string/launcher_of_envbutton" />
+
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/layout_page_rl"
+                android:layout_marginRight="@dimen/layout_page_rl">
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="@dimen/set_button_size_high"
+                    android:layout_width="0dp"
+                    app:icon="@drawable/set_path"
+                    app:backgroundTint="@color/tab_home_nvg_iconinit"
+                    android:textSize="@dimen/small_page_text_sizes"
+                    app:iconTint="@color/hl_color"
+                    android:textColor="#FFFFFF"
+                    android:layout_weight="1"
+                    android:id="@+id/set_srcengDir"
+                    app:iconGravity="textStart"
+                    android:text="@string/srceng_launcher_set_game_path" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="@dimen/set_button_size_high"
+                    android:layout_width="0dp"
+                    app:backgroundTint="@color/tab_home_nvg_iconinit"
+                    android:textSize="@dimen/small_page_text_sizes"
+                    app:iconTint="@color/hl_color"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="center_horizontal"
+                    app:icon="@drawable/re_log_cap"
+                    android:layout_weight="1"
+                    android:id="@+id/log_menu_tore"
+                    app:iconGravity="textStart"
+                    android:text="@string/re_log" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:background="@drawable/tab_home_nvg_bg"
+            android:padding="@dimen/layout_page_padding_all"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:scrollbarThumbVertical="@drawable/custom_scrollbar_thumb"
+                android:id="@+id/surfaces_logsview">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:hint="@string/srceng_launcher_error_logoutview"
+                    android:textColorHint="#8A000000"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/din1451alt"
+                    android:backgroundTint="@color/hl_color"
+                    android:textColor="@color/primary_material_light"
+                    android:layout_marginTop="@dimen/layout_page_options_edit_lmt"
+                    android:id="@+id/log_view_control" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,208 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style
+        name="Base.AppTheme"
+        parent="Theme.Material3.Dark.NoActionBar">
+
+        <item name="searchViewShowingColor">@color/light_showing_color</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+
+    </style>
+    <style
+        name="AppTheme"
+        parent="Base.AppTheme" />
+    <style
+        name="CustomTabTextAppearance"
+        parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/small_page_text_sizes</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="pic_manager_layout_style">
+        <item name="android:textSize">@dimen/small_page_text_sizes</item>
+        <item name="android:textStyle">bold</item>
+        <item name="maxLines">1</item>
+        <item name="singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="CustomNavigationMenuTextAppearance">
+        <item name="android:textSize">7sp</item>
+        <item name="android:textColor">@color/bilibili_pink</item> <!-- Change this to your desired color -->
+    </style>
+    <style
+        name="TabTextsizes_csdn"
+        parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style
+        name="Theme.VerticalTabLayout"
+        parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item
+            name="android:statusBarColor"
+            tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style
+        name="Widget.Design.TabLayout"
+        parent="Base.Widget.Design.TabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabIndicatorFullWidth">true</item>
+    </style>
+
+    <style
+        name="Base.Widget.Design.TabLayout"
+        parent="android:Widget">
+        <item name="android:background">@null</item>
+        <item name="tabIconTint">@null</item>
+        <item name="tabMaxWidth">@dimen/design_tab_max_width</item>
+        <item name="tabIndicatorAnimationDuration">@integer/design_tab_indicator_anim_duration_ms</item>
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorGravity">bottom</item>
+        <item name="tabIndicatorAnimationMode">linear</item>
+        <item name="tabIndicator">@drawable/mtrl_tabs_default_indicator</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
+        <item name="tabTextColor">@null</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="tabUnboundedRipple">false</item>
+    </style>
+
+    <style
+        name="TextAppearance.Design.Tab"
+        parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/design_tab_text_size</item>
+        <item name="android:textColor">@color/mtrl_tabs_legacy_text_color_selector</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style
+        name="Widget.MaterialComponents.TabLayout"
+        parent="Widget.Design.TabLayout">
+        <item name="enforceMaterialTheme">true</item>
+        <item name="enforceTextAppearance">true</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="tabIconTint">@color/mtrl_tabs_icon_color_selector</item>
+        <item name="tabIndicatorAnimationDuration">@integer/mtrl_tab_indicator_anim_duration_ms</item>
+        <item name="tabIndicatorColor">?attr/colorPrimary</item>
+        <item name="tabTextAppearance">?attr/textAppearanceButton</item>
+        <item name="tabTextColor">@color/mtrl_tabs_icon_color_selector</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="tabUnboundedRipple">false</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TabLayout.Colored">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="tabIconTint">@color/mtrl_tabs_icon_color_selector_colored</item>
+        <item name="tabIndicatorColor">?attr/colorOnPrimary</item>
+        <item name="tabTextColor">@color/mtrl_tabs_icon_color_selector_colored</item>
+        <item name="tabRippleColor">@color/mtrl_tabs_colored_ripple_color</item>
+    </style>
+
+    <style
+        name="Widget.MaterialComponents.TabLayout.PrimarySurface"
+        parent="Widget.MaterialComponents.TabLayout.Colored" />
+
+    <!-- Styles for M3 Tabs -->
+    <style
+        name="Base.Widget.Material3.TabLayout"
+        parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:background">@macro/m3_comp_primary_navigation_tab_container_color</item>
+        <item name="enforceTextAppearance">false</item>
+        <item name="tabIconTint">@color/m3_tabs_icon_color</item>
+        <item name="tabTextAppearance">@macro/m3_comp_primary_navigation_tab_with_label_text_label_text_type</item>
+        <item name="tabTextColor">@color/m3_tabs_text_color</item>
+        <item name="tabIndicator">@drawable/m3_tabs_rounded_line_indicator</item>
+        <item name="tabIndicatorAnimationMode">elastic</item>
+        <item name="tabIndicatorColor">@macro/m3_comp_primary_navigation_tab_active_indicator_color</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabIndicatorAnimationDuration">?attr/motionDurationLong2</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.TabLayout</item>
+    </style>
+
+    <style
+        name="ThemeOverlay.Material3.TabLayout"
+        parent="">
+        <item name="badgeStyle">@style/Widget.Material3.Badge</item>
+    </style>
+
+    <style
+        name="Widget.Material3.TabLayout"
+        parent="Base.Widget.Material3.TabLayout" />
+
+    <!-- Styles for M3 Tabs used on an elevatable surface. -->
+    <style
+        name="Base.Widget.Material3.TabLayout.OnSurface"
+        parent="Widget.Material3.TabLayout">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style
+        name="Widget.Material3.TabLayout.OnSurface"
+        parent="Base.Widget.Material3.TabLayout.OnSurface" />
+
+    <!-- Style for M3 secondary tabs, which are used as an alternate when primary tabs are already present in the UI. This style does not have a bottom divider, which is added in v21 because the drawable cannot use theme colors pre-21. -->
+    <style
+        name="Base.Widget.Material3.TabLayout.Secondary"
+        parent="Widget.Material3.TabLayout">
+        <item name="android:background">@macro/m3_comp_secondary_navigation_tab_container_color</item>
+        <item name="tabIconTint">@color/m3_tabs_icon_color_secondary</item>
+        <item name="tabTextAppearance">@macro/m3_comp_secondary_navigation_tab_label_text_type</item>
+        <item name="tabTextColor">@color/m3_tabs_text_color_secondary</item>
+        <item name="tabIndicator">@drawable/m3_tabs_line_indicator</item>
+        <item name="tabIndicatorColor">@macro/m3_comp_secondary_navigation_tab_active_indicator_color</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="tabIndicatorFullWidth">true</item>
+    </style>
+
+    <style
+        name="Widget.Material3.TabLayout.Secondary"
+        parent="Base.Widget.Material3.TabLayout.Secondary" />
+    <!-- 通用TextView样式 -->
+    <style
+        name="CommonTextViewStyle"
+        parent="android:Widget.TextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">@dimen/layout_page_tm</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textSize">@dimen/mediumsmall_page_text_sizes</item>
+        <item name="android:fontFamily">@font/linux_xin_zzh</item>
+        <item name="android:layout_marginLeft">@dimen/layout_page_rl</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">@dimen/layout_page_tm</item>
+    </style>
+
+    <!-- 通用EditText样式 -->
+    <style
+        name="CommonEditTextStyle"
+        parent="android:Widget.EditText">
+        <item name="android:layout_height">@dimen/set_editbox_high</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">@dimen/layout_page_tm</item>
+        <item name="android:padding">@dimen/layout_page_padding_all</item>
+        <item name="android:textSize">@dimen/medium_page_text_sizes</item>
+        <item name="android:textColor">@color/primary_material_light</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:background">@drawable/tab_home_nvg_bg</item>
+    </style>
+
+</resources>

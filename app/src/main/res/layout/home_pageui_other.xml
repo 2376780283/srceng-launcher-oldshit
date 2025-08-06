@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/spin_color"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="10dp">
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fillViewport="false"
+        android:scrollbarThumbVertical="@drawable/custom_scrollbar_thumb">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/layout_page_padding">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/start_button_text_start"
+                android:fontFamily="@font/small_round"
+                android:textColor="@color/white"
+                android:text="@string/launcher_mod_ot" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/mediumsmall_page_text_sizes"
+                android:fontFamily="@font/linux_xin_zzh"
+                android:layout_marginLeft="@dimen/layout_page_rl"
+                android:textColor="@color/white"
+                android:text="@string/tab_source_home_fpss" />
+            <EditText
+                android:layout_height="@dimen/set_editbox_high"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_page_tm"
+                android:background="@drawable/tab_home_nvg_bg"
+                android:hint="input fps Count 30 or 60 or 90"
+                android:padding="@dimen/layout_page_padding_all"
+                android:textSize="@dimen/medium_page_text_sizes"
+                android:textColor="@color/primary_material_light"
+                android:layout_marginTop="@dimen/layout_page_tm"
+                android:maxLines="1"
+                android:inputType="text"
+                android:id="@+id/video_fps" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/mediumsmall_page_text_sizes"
+                android:fontFamily="@font/linux_xin_zzh"
+                android:layout_marginLeft="@dimen/layout_page_rl"
+                android:textColor="@color/white"
+                android:text="@string/tab_source_home_playername" />
+            <EditText
+                android:layout_height="@dimen/set_editbox_high"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_page_tm"
+                android:background="@drawable/tab_home_nvg_bg"
+                android:hint="name"
+                android:padding="@dimen/layout_page_padding_all"
+                android:textSize="@dimen/medium_page_text_sizes"
+                android:textColor="@color/primary_material_light"
+                android:layout_marginTop="@dimen/layout_page_tm"
+                android:maxLines="1"
+                android:inputType="text"
+                android:id="@+id/video_name" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/mediumsmall_page_text_sizes"
+                android:fontFamily="@font/linux_xin_zzh"
+                android:layout_marginLeft="@dimen/layout_page_rl"
+                android:textColor="@color/white"
+                android:text="@string/tab_source_home_videoxm" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_height="@dimen/set_editbox_high"
+                    android:layout_width="0dp"
+                    android:padding="@dimen/layout_page_padding_all"
+                    android:textSize="@dimen/medium_page_text_sizes"
+                    android:textColor="@color/primary_material_light"
+                    android:layout_marginTop="@dimen/layout_page_rl"
+                    android:layout_marginBottom="@dimen/layout_page_tm"
+                    android:background="@drawable/tab_home_nvg_bg"
+                    android:hint="1280"
+                    android:layout_marginRight="@dimen/layout_page_rl"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:inputType="phone"
+                    android:id="@+id/video_w" />
+                <EditText
+                    android:layout_height="@dimen/set_editbox_high"
+                    android:layout_width="0dp"
+                    android:padding="@dimen/layout_page_padding_all"
+                    android:textSize="@dimen/medium_page_text_sizes"
+                    android:layout_marginLeft="@dimen/layout_page_rl"
+                    android:textColor="@color/primary_material_light"
+                    android:layout_marginTop="@dimen/layout_page_tm"
+                    android:layout_marginBottom="@dimen/layout_page_tm"
+                    android:background="@drawable/tab_home_nvg_bg"
+                    android:hint="720"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:inputType="phone"
+                    android:id="@+id/video_h" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_page_tm"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/mediumsmall_page_text_sizes"
+                android:fontFamily="@font/linux_xin_zzh"
+                android:layout_marginLeft="@dimen/layout_page_rl"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/layout_page_tm"
+                android:text="@string/tab_source_home_gamma" />
+            <SeekBar
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_page_tm"
+                android:background="@null"
+                android:splitTrack="false"
+                android:layout_marginTop="@dimen/layout_page_tm"
+                android:progressDrawable="@drawable/tab_home_nvg_bg"
+                android:id="@+id/set_logview_textsize" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="@dimen/mediumsmall_page_text_sizes"
+                    android:fontFamily="@font/notosans_regular"
+                    android:layout_marginLeft="@dimen/layout_page_rl"
+                    android:layout_marginRight="@dimen/layout_page_rl"
+                    android:textColor="@color/tab_home_nvg_iconinit"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="BLOOM 效果" />
+                <com.zzh.widget.SwitchFlyView.SwitchView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:primaryColor="@color/hl_color"
+                    app:hasShadow="true"
+                    android:id="@+id/Controlwithbloom"
+                    app:bgColor="@color/primary_dark_material_dark"
+                    app:primaryColorDark="@color/primary_dark_material_light" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="@dimen/mediumsmall_page_text_sizes"
+                    android:fontFamily="@font/notosans_regular"
+                    android:layout_marginLeft="@dimen/layout_page_rl"
+                    android:layout_marginRight="@dimen/layout_page_rl"
+                    android:textColor="@color/selected_item_color"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="色彩修正" />
+                <com.zzh.widget.SwitchFlyView.SwitchView
+                    android:layout_height="wrap_content"
+                    app:primaryColor="@color/hl_color"
+                    app:hasShadow="true"
+                    app:bgColor="@color/primary_dark_material_dark"
+                    app:primaryColorDark="@color/primary_dark_material_light"
+                    android:id="@+id/Controlwithficolor"
+                    android:layout_width="wrap_content" />
+            </LinearLayout>
+            <!-- <TextView style="@style/CommonTextViewStyle" android:text="Bloom 蓝滤镜颜色" /> <EditText style="@style/CommonEditTextStyle" android:hint="Bloom 蓝滤镜颜色" android:id="@+id/r_bloomtintb" /> <TextView style="@style/CommonTextViewStyle" android:text="Bloom 绿滤镜颜色" /> <EditText style="@style/CommonEditTextStyle" android:hint="Bloom 绿滤镜颜色" android:id="@+id/r_bloomtintg" /> <TextView style="@style/CommonTextViewStyle" android:text="Bloom 红滤镜颜色" /> <EditText style="@style/CommonEditTextStyle" android:hint="Bloom 红滤镜颜色" android:id="@+id/r_bloomtintr" /> <TextView style="@style/CommonTextViewStyle" android:text="全局运动高斯模糊" /> <EditText style="@style/CommonEditTextStyle" android:hint="全局运动高斯模糊" android:id="@+id/mat_motion_blur_strength" /> <TextView style="@style/CommonTextViewStyle" android:text="Bloom 控制泛光的变化速率" /> <EditText style="@style/CommonEditTextStyle" android:hint="Bloom 控制泛光的变化速率" android:id="@+id/r_bloomtintexponent" /> <TextView style="@style/CommonTextViewStyle" android:text="Bloom 控制泛光效果的总缩放比例" /> <EditText style="@style/CommonEditTextStyle" android:hint="Bloom 控制泛光效果的总缩放比例" android:id="@+id/mat_bloomscale" /> <TextView style="@style/CommonTextViewStyle" android:text="Bloom 控制泛光效果的整体缩放系数" /> <EditText style="@style/CommonEditTextStyle" android:hint="Bloom 控制泛光效果的整体缩放系数" android:id="@+id/mat_bloom_scalefactor_scalar" /> -->
+        </LinearLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

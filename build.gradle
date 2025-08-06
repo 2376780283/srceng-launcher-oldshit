@@ -1,0 +1,22 @@
+buildscript {
+    ext.kotlin_version = '1.9.0' // 根据需要使用合适的 Kotlin 版本
+
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+
+        classpath "com.android.tools.build:gradle:8.2.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+       // classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.7.0" // Safe Args 插件
+       
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

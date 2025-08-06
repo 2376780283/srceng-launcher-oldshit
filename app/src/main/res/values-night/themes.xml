@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style
+        name="Base.AppTheme"
+        parent="Theme.Material3.Dark.NoActionBar">
+        <!-- 设置全屏 by zzh -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+        <item name="colorPrimary">@color/primary_color</item>
+    </style>
+
+    <style
+            name="AppTheme"
+            parent="Base.AppTheme" />
+</resources>

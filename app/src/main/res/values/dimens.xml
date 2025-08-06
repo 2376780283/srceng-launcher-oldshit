@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="custom_tab_icon_size">54dp</dimen>
+    <dimen name="start_button_high">50dp</dimen>
+    <dimen name="start_button_width">200dp</dimen>
+    <dimen name="start_button_text_start">17sp</dimen>
+    <dimen name="start_button_icons_start">19sp</dimen>
+    <dimen name="set_button_size_high">50dp</dimen>
+    <dimen name="set_checkbox_highsize_b">20dp</dimen>
+    <dimen name="set_editbox_high">33dp</dimen>
+    <dimen name="tile_act_high">200dp</dimen>
+    <dimen name="tile_act_widgh">350dp</dimen>
+    <dimen name="layout_page_rl">5dp</dimen>
+    <dimen name="layout_page_tm">5dp</dimen>
+    <dimen name="layout_page_padding">5dp</dimen>
+    <dimen name="layout_page_padding_all">10dp</dimen>
+    <dimen name="small_page_text_sizes">8sp</dimen>
+    <dimen name="smallrh_page_text_sizes">8sp</dimen>
+    <dimen name="medium_page_text_sizes">12sp</dimen>
+    <dimen name="mediumsmall_page_text_sizes">10sp</dimen>
+    <dimen name="layout_page_options_edit_lmt">5dp</dimen>
+    <dimen name="layout_page_options_edit_pd">10dp</dimen>
+    <dimen name="config_icons_size">25dp</dimen>
+    <dimen name="design_tab_scrollable_min_width">72dp</dimen>
+    <dimen name="design_tab_max_width">264dp</dimen>
+    <dimen name="design_tab_text_size">14sp</dimen>
+    <dimen name="design_tab_text_size_2line">12sp</dimen>
+    <!-- Vertical tablayout_Control -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Padding -->
+    <dimen name="padding_tiny">1dp</dimen>
+    <dimen name="padding_small">2dp</dimen>
+    <dimen name="padding_medium">4dp</dimen>
+    <dimen name="padding_moderate">6dp</dimen>
+    <dimen name="padding_heavy">5dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_extra_large">24dp</dimen>
+    <dimen name="padding_extra_extra_large">32dp</dimen>
+    <!-- Input text padding -->
+    <dimen name="padding_input_bottom">@dimen/padding_heavy</dimen>
+    <dimen name="padding_input_top">11dp</dimen>
+    <!-- Main Activity components -->
+    <dimen name="empty_icon_width">60dp</dimen>
+    <dimen name="empty_icon_height">60dp</dimen>
+    <dimen name="navigation_header_height">160dp</dimen>
+    <dimen name="navigation_item_height">48dp</dimen>
+    <dimen name="navigation_item_icon_size">40dp</dimen>
+    <dimen name="max_pad_width">192dp</dimen>
+    <!-- Fragment padding -->
+    <dimen name="fragment_padding_medium">10dp</dimen>
+    <!-- Misc paddings -->
+    <dimen name="profile_editor_image_padding">@dimen/padding_small</dimen>
+
+    <!-- 其他 -->
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_1_5">1.5dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_2_5">2.5dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_3_5">3.5dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_4_5">4.5dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_7">7dp</dimen>
+    <dimen name="dp_7_5">7.5dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_9">9dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_19">19dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="sp_6">6sp</dimen>
+    <dimen name="sp_7">7sp</dimen>
+    <dimen name="sp_8">8sp</dimen>
+    <dimen name="sp_9">9sp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_17">17sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_19">19sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_21">21sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_23">23sp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="sp_25">25sp</dimen>
+
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_34">34dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+      <dimen name="sp_34">34sp</dimen>
+     <dimen name="dp_10">10dp</dimen>
+</resources>

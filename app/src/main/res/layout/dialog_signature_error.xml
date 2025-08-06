@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/coordinator">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:background="@drawable/card_bg_black"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/start_button_text_start"
+            android:fontFamily="@font/small_round"
+            android:textColor="@color/selected_item_color"
+            android:id="@+id/dialog_title"
+            android:text="签名错误" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/smallrh_page_text_sizes"
+            android:textColor="@color/colorPrimary_dark"
+            android:layout_marginTop="@dimen/layout_page_padding_all"
+            android:id="@+id/dialog_message"
+            android:text="应用签名无效，请下载官方版本" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_height="@dimen/set_button_size_high"
+            android:layout_width="match_parent"
+            app:icon="@drawable/re_log_cap"
+            app:backgroundTint="@color/tab_home_nvg_iconinit"
+            android:textSize="@dimen/small_page_text_sizes"
+            app:iconTint="@color/hl_color"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/dialog_button_exit"
+            app:iconGravity="textStart"
+            android:text="退出" />
+    </LinearLayout>
+    <ImageView
+        android:layout_height="@dimen/config_icons_size"
+        android:layout_width="@dimen/config_icons_size"
+        android:src="@drawable/ic_launcher_alert"
+        android:layout_gravity="top|end" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

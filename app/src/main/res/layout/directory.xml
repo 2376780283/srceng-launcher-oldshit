@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:layout_marginTop="1dp"
+    android:duplicateParentState="true"
+    android:focusable="true">
+
+    <ImageView
+        android:layout_height="@dimen/navigation_item_icon_size"
+        android:layout_width="@dimen/navigation_item_icon_size"
+        android:id="@+id/folder_icon"
+        android:src="@drawable/ic_folder_grid"
+        android:gravity="left"
+        android:clickable="false"
+        android:scaleType="centerInside"
+        android:layout_marginRight="@dimen/layout_page_padding"
+        android:layout_marginLeft="@dimen/set_checkbox_highsize_b"
+        android:focusable="false" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:clickable="false"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_medium"
+        android:duplicateParentState="true"
+        android:focusable="false"
+        android:paddingTop="@dimen/padding_medium">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:clickable="false"
+            android:fontFamily="@font/din1451alt"
+            android:textSize="@dimen/design_tab_text_size_2line"
+            android:textColor="@color/primary_dark_material_dark"
+            android:duplicateParentState="true"
+            android:focusable="false"
+            android:id="@+id/dirname"
+            android:text="" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/layout_page_rl"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="16dp">
+
+    <ImageView
+        android:layout_height="@dimen/set_button_size_high"
+        android:layout_width="@dimen/set_button_size_high"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/zzhlife"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="@dimen/set_checkbox_highsize_b"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/layout_page_padding_all"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/set_button_size_high">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/medium_page_text_sizes"
+            android:textColor="@android:color/black"
+            android:id="@+id/software_info"
+            android:text="ZZH LIFE" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/smallrh_page_text_sizes"
+            android:textColor="@android:color/black"
+            android:id="@+id/developer_info"
+            android:text="启动器开发者" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

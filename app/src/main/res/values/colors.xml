@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#F5F5F5</color>
+    <color name="white_nobg">#808080</color>
+    <color name="hl_color">#F79A10</color>
+    <color name="bilibili_pink">#3E7691</color>
+    <color name="spin_color">#3F3F3F</color>
+    <color name="primary_color">#C8C8C8</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimary_light">#F5F5F5</color>
+    <color name="colorPrimary_dark">#212121</color>
+    <color name="apple_switch_track_color">#C8C8C8</color>
+    <color name="apple_switch_thumb_color">#FFFFFF</color>
+    <color name="launcher_zzh_custom">#D1E868</color>
+    <color name="tablayout_background_blur">#00000000</color>
+    <color name="selected_item_color">#FF0000</color> <!-- 选中状态颜色 -->
+    <color name="unselected_item_color">#000000</color> <!-- 未选中状态颜色 -->
+    <color name="tab_home_nvg_iconinit">#639AE6</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background_color">#F0F0F0</color> <!-- 背景颜色 -->
+ 
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="github_io_java">#B07219</color>
+    <color name="github_io_c">#F34B7D</color>
+    <color name="github_io_shell">#89E051</color>
+    <color name="huawei_color">#C3172D</color>
+    <color name="xiaomi_color">#FF6805</color>
+    <color name="android_studio">#3DDA84</color>
+    <color name="card_pirmis_color_a">#EAB1A5</color>
+    <color name="card_pirmis_color_b">#DB93B9</color>
+    <!--其他-->
+     <color name="light_showing_color">#F0F0F0</color>
+    <color name="night_showing_color">#2F2C36</color>
+    <color name="color_2">#D1E868</color>
+    <color name="color_3">#B994D3</color>
+    <color name="color_4">#B9E0B9</color>
+    <color name="color_5">#EAB1A5</color>
+    
+     <color name="Main_background">#171717</color>
+     <color name="Main_Foreground">#2F2F2F</color>
+</resources>

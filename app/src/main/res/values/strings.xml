@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Counter Strike Source Offensive</string>
+    <string name="srceng_app_name">CSSO</string>
+    <string name="srceng_launcher_about">关于</string>
+    <string name="srceng_launcher_about_text">\n感谢 nillerusr 和 jusic 进行移植 \zzh 制作应用\nValve 制作起源引擎\n\n仅供非商业使用！\n联系我们：unknownandlost11@gmail.com\n\n捐赠：https://new.donatepay.ru/@nillerusr\nBTC(比特币)：bc1qnjq92jj9uqjtafcx2zvnwd48q89hgtd6w8a6na\nXMR(门罗币)：48iXvX61MU24m5VGc77rXQYKmoww3dZh6hn7mEwDaLVTfGhyBKq2teoPpeBq6xvqj4itsGh6EzNTzBty6ZDDevApCFNpsJg</string> <!-- - 不可用 -->
+    <string name="srceng_launcher_launch">启动</string>
+    <string name="srceng_launcher_set">设置</string>
+    <string name="srceng_launcher_ok">确定</string>
+    <string name="srceng_launcher_cancel">取消</string>
+    <string name="srceng_launcher_error">错误</string>
+    <string name="srceng_launcher_error_logoutview">日志不存在 或者发生错误 日志读取失败</string>
+    <string name="srceng_launcher_error_missing_obb_a">路径上没有</string>
+    <string name="srceng_launcher_error_missing_obb_b">文件</string>
+    <string name="srceng_launcher_error_test_write">测试写入失败，所有文件将存储在</string>
+    <string name="srceng_launcher_error_no_permission">没有权限游戏将无法运行</string>
+    <string name="srceng_launcher_error_find_gameinfo">找不到游戏资源。路径设置正确吗？</string>
+    <string name="srceng_launcher_command_args">命令行参数</string>
+    <string name="srceng_launcher_env">环境</string>
+    <string name="srceng_launcher_Achievement">个</string>
+    <string name="srceng_launcher_Achievement_on">当前已完成成就</string>
+    <string name="srceng_launcher_Achievement_override">已完成所有成就</string>
+    <string name="srceng_launcher_game_path">游戏资源路径</string>
+    <string name="srceng_launcher_set_game_path">设置游戏目录</string>
+    <string name="srceng_launcher_game_menu">模组列表</string>
+    <string name="srceng_launcher_touch_controls">显示触控控件</string>
+    <string name="srceng_launcher_volume_buttons">多线程优化</string>
+    <string name="srceng_launcher_volume_buttons_desc">音量增大按钮可以绑定为 L_TRIGGER，音量减小按钮可以绑定为 R_TRIGGER！！！</string>
+    <string name="srceng_launcher_check_updates">检查更新</string>
+    <string name="srceng_launcher_immersive_mode">沉浸模式</string>
+    <string name="srceng_launcher_screen_resolution">实时分析 游戏对设备图形压力</string>
+    <string name="srceng_game_portal">传送门</string> <!-- - 不可用 -->
+    <string name="srceng_dir_choice_btn">设置当前目录</string>
+    <string name="srceng_update">有更新可用！</string>
+    <string name="tab_main_activity">开始</string>
+    <string name="tab_other_activity">启动器</string>
+    <string name="tab_options_activity">环境</string>
+    <string name="starting_game_texitview">启动游戏</string>
+    <string name="out_time">上次启动时间</string>
+    <string name="playtimer">游戏时长</string>
+    <string name="game_dir_size">游戏大小</string>
+    <string name="set_dir_act_mode">类型 : 单选目录</string>
+    <string name="set_dir_act_other">模式 : 目录选择</string>
+    <string name="set_dir_act_setting">选择的目录是</string>
+    <string name="set_dir_act_setting_wn">选择目录后请按下刷新路径，更新选择的目录</string>
+    <string name="main_log">起源引擎日志内容</string>
+    <string name="view_log">日志</string>
+    <string name="re_log">刷新日志</string>
+    <string name="play_video">观看动画</string>
+    <string name="back_launcher">返回启动器</string>
+    <string name="contrul_the_mouse_emo">启用鼠标（不建议）</string>
+    <string name="no_video_launcjer">没有 "valve.mp4" 可以播放</string>
+    <string name="tab_source_home">模组信息</string>
+    <string name="tab_source_video">其他设置</string>
+    <string name="tab_source_gamecheck">文件完整性</string>
+    <string name="tab_source_home_videoxm">游戏内分辨率(游戏内可设置)・・</string>
+    <string name="tab_source_home_playername">玩家名称_可选ᕕ༼•̀︿•́༽ᕗ</string>
+    <string name="tab_source_home_fpss">帧率限制范围(根据设备性能设置(ﾉ*ﾟｰﾟ)ﾉ)</string>
+    <string name="tab_source_home_gamma">调整亮度范围 (根据设备性能设置 可能没效果 值在1.6 ～ 2.8 之间ヽ(*ﾟｰﾟ*)ﾉ</string>
+    <string name="tab_source_setlogsize">设置日日记录器字体大小</string>
+    <string name="tab_source_home_save_config">保存参数</string>
+    <string name="dialog_setunhide">确定要隐藏模组吗</string>
+    <string name="dialog_setnohide">确定要恢复模组吗</string>
+    <string name="set_koob_file">配置文件丢失或不存在！</string>
+    <string name="mod_info_null"> 没有信息 </string>
+    <string name="mod_info_info">模组信息： </string>
+    <string name="mod_info_usr">作者名称： </string>
+    <string name="mod_info_ver">模组版本： </string>
+    <string name="mod_info_map">地图： </string>
+    <string name="launcher_of_envbutton">其他环境</string>
+    <string name="launcher_mod_ot">启动器设置</string>
+    <string name="launcher_mod_padui">启用GamePadUI</string>
+    
+    <!--其他的-->
+    <string name="title">标题</string>
+    <string name="daily">记录</string>
+    <string name="change_color">更换颜色</string>
+    <string name="sure">确定</string>
+    <string name="search">搜索</string>
+    <string name="content">内容</string>
+    <string name="delete">删除</string>
+    <string name="save">保存</string>
+    <string name="about">关于</string>
+    <string name="checking_for_new_version">正在检查新版本</string>
+    <string name="new_version">新版本</string>
+    <string name="it_is_the_latest_version">已是最新版本</string>
+    <string name="cancel">取消</string>
+    <string name="failed_to_check_for_updates">检查更新失败</string>
+    <string name="add">添加</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="settings">设置</string>
+    <string name="update">更新</string>
+    <string name="check_update">检查更新</string>
+    <string name="edit">编辑</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="format_0">yyyy年MM月dd日 HH:mm:ss</string>
+    <string name="format_1">yyyy-MM-dd HH:mm:ss</string>
+    <string name="format_2">yyyy/MM/dd HH:mm:ss</string>
+</resources>

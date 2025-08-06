@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:layout_height="@dimen/config_icons_size"
+        android:layout_width="@dimen/config_icons_size"
+        android:src="@drawable/sheel_indicate_down"
+        android:padding="2dp"
+        android:id="@+id/image_round_level"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:divider="@drawable/custom_divider"
+            android:dividerPadding="20dp"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:layout_weight="1">
+
+            <include
+                layout="@layout/item_layout_clock" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_margin="@dimen/layout_page_rl"
+                android:textSize="10sp"
+                android:fontFamily="@font/notosans_regular"
+                android:textColor="@color/tab_home_nvg_iconinit"
+                android:layout_gravity="center_vertical"
+                android:text="其他" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/notosans_regular"
+                    android:layout_marginLeft="@dimen/layout_page_rl"
+                    android:layout_marginRight="@dimen/layout_page_rl"
+                    android:textColor="@color/tab_home_nvg_iconinit"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="模拟光标" />
+
+                <com.zzh.widget.SwitchFlyView.SwitchView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:primaryColor="@color/hl_color"
+                    app:hasShadow="true"
+                    app:bgColor="@color/primary_material_dark"
+                    app:primaryColorDark="@color/primary_dark_material_light"
+                    android:id="@+id/hide_oss"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/notosans_regular"
+                    android:layout_marginLeft="@dimen/layout_page_rl"
+                    android:layout_marginRight="@dimen/layout_page_rl"
+                    android:textColor="@color/tab_home_nvg_iconinit"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="调试SDL" />
+
+                <com.zzh.widget.SwitchFlyView.SwitchView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:primaryColor="@color/hl_color"
+                    app:hasShadow="true"
+                    app:bgColor="@color/primary_material_dark"
+                    app:primaryColorDark="@color/primary_dark_material_light"
+                    android:id="@+id/debug_mode_menu"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_height="@dimen/set_button_size_high"
+                android:layout_width="match_parent"
+                app:backgroundTint="@color/tab_home_nvg_iconinit"
+                android:layout_margin="5dp"
+                android:textSize="@dimen/small_page_text_sizes"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/exit_back"
+                android:text="@string/back_launcher" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_height="@dimen/set_button_size_high"
+                android:layout_width="match_parent"
+                app:backgroundTint="@color/tab_home_nvg_iconinit"
+                android:layout_margin="5dp"
+                android:textSize="@dimen/small_page_text_sizes"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/exit_sdl"
+                android:text="EXIT" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:layout_marginLeft="@dimen/layout_page_rl"
+                android:layout_marginRight="@dimen/layout_page_rl"
+                app:cardCornerRadius="10dp"
+                android:id="@+id/control">
+
+                <SurfaceView
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/modelview" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
