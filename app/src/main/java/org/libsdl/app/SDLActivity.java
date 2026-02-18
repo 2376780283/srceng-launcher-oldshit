@@ -1,7 +1,7 @@
 package org.libsdl.app;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
-import zzh.source.csso.MainActivity;
+import zzh.source.srceng.ui.activity.MainActivity;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -79,15 +79,15 @@ import android.widget.Button;
 import android.graphics.drawable.ColorDrawable;
 import android.content.SharedPreferences;
 import com.valvesoftware.ValveActivity2;
-import zzh.source.csso.R;
+import zzh.source.srceng.R;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.*;
-import zzh.botton_activity.*;
+// import zzh.botton_activity.*;  // Not needed
 
-import com.zzh.widget.blurview.BlurAlgorithm;
-import com.zzh.widget.blurview.BlurView;
-import com.zzh.widget.blurview.RenderEffectBlur;
-import com.zzh.widget.blurview.RenderScriptBlur;
+import zzh.source.srceng.ui.widget.blur.BlurAlgorithm;
+import zzh.source.srceng.ui.widget.blur.BlurView;
+import zzh.source.srceng.ui.widget.blur.RenderEffectBlur;
+import zzh.source.srceng.ui.widget.blur.RenderScriptBlur;
 import android.os.SystemClock;
 import java.io.IOException;
 import android.content.res.AssetFileDescriptor; // 调取资源和
@@ -435,8 +435,8 @@ public class SDLActivity extends AppCompatActivity
                         Button clickedButton = additionalLayout.findViewById(R.id.btnCenter);
                         if (rightPopup[0] != null && rightPopup[0].isShowing()) {
                         } else {
-                            set_BottomSheetDialogFragment bottomSheetFragment =
-                                    new set_BottomSheetDialogFragment(ImprovemView);
+                            BottomSheetDialogFragment bottomSheetFragment =
+                                    new BottomSheetDialogFragment(ImprovemView);
                             bottomSheetFragment.show(
                                     getSupportFragmentManager(), "MyBottomSheetDialogFragment");
                         }

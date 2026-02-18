@@ -73,7 +73,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="zzh.ui.dirchUI.DirchActivity"
+            android:name="zzh.source.srceng.ui.component.FileManagerActivity"
             android:exported="true"
             android:resizeableActivity="false"
             android:launchMode="singleTask"
@@ -101,38 +101,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.liuxing.daily.ui.settings.SettingsActivity"
-            android:exported="false"
-            android:screenOrientation="sensorLandscape"
-            android:resizeableActivity="false"
-            android:label="@string/title_activity_settings" />
-        <activity
-            android:name="com.liuxing.daily.ui.look.LookDailyActivity"
-            android:screenOrientation="sensorLandscape"
-            android:resizeableActivity="false"
-            android:exported="false" />
-        <activity
-            android:name="com.liuxing.daily.ui.updatelog.UpdateLogActivity"
-            android:screenOrientation="sensorLandscape"
-            android:resizeableActivity="false"
-            android:exported="false" />
-        <activity
-            android:name="com.liuxing.daily.ui.about.AboutActivity"
-            android:screenOrientation="sensorLandscape"
-            android:resizeableActivity="false"
-            android:exported="false" />
-        <activity
-            android:name="com.liuxing.daily.ui.edit.EditDailyActivity"
-            android:screenOrientation="sensorLandscape"
-            android:resizeableActivity="false"
-            android:exported="false" />
-        <activity
-            android:name="com.liuxing.daily.ui.add.AddDailyActivity"
-            android:screenOrientation="sensorLandscape"
-            android:resizeableActivity="false"
-            android:exported="false" />
-        <activity
-            android:name="zzh.util.CrashReportActivity"
+            android:name="zzh.source.srceng.util.crash.CrashReportActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="sensorLandscape"
             android:launchMode="singleTask"
