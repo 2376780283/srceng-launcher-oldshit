@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.*;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-import zzh.source.srceng.ui.fragment.OptionsPage.PageEPOT;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {

@@ -13,7 +13,7 @@
         android:id="@+id/viewPager"
         android:layout_gravity="left" />
 
-    <com.zzh.widget.tablayout.VerticalTabLayout
+    <zzh.source.srceng.ui.widget.tablayout.VerticalTabLayout
         android:layout_height="match_parent"
         android:layout_width="@dimen/max_right_tab_widgh"
         app:tabMode="auto"

@@ -21,7 +21,7 @@
          android:id="@+id/bottom_sheet"
          android:layout_gravity="bottom">
 
-        <com.zzh.widget.blurview.BlurView
+        <zzh.source.srceng.ui.widget.blur.BlurView
              android:layout_height="match_parent"
              android:layout_width="match_parent"
              android:layout_gravity="center"
@@ -169,14 +169,14 @@
                      android:fontFamily="@font/linux_xin_zzh"
                      android:id="@+id/Achievement_Environment" />
 
-                <com.zzh.widget.progressbar.ProgressBarRoundNormal
+                <zzh.source.srceng.ui.widget.progress.ProgressBarRoundNormal
                      android:layout_height="@dimen/navigation_header_height"
                      android:layout_width="@dimen/navigation_header_height"
                      android:id="@+id/achievement_view" />
 
             </LinearLayout>
 
-        </com.zzh.widget.blurview.BlurView>
+        </zzh.source.srceng.ui.widget.blur.BlurView>
 
     </FrameLayout>
 

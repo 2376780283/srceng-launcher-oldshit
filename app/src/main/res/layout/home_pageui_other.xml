@@ -151,7 +151,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"
                     android:text="BLOOM 效果" />
-                <com.zzh.widget.SwitchFlyView.SwitchView
+                <zzh.source.srceng.ui.widget.customswitch.SwitchView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     app:primaryColor="@color/hl_color"
@@ -177,7 +177,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"
                     android:text="色彩修正" />
-                <com.zzh.widget.SwitchFlyView.SwitchView
+                <zzh.source.srceng.ui.widget.customswitch.SwitchView
                     android:layout_height="wrap_content"
                     app:primaryColor="@color/hl_color"
                     app:hasShadow="true"

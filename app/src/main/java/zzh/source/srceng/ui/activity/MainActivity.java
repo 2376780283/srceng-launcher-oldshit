@@ -125,9 +125,9 @@ public class MainActivity extends AppCompatActivity {
         String gamePath = mPref.getString("gamepath", null);
         sizeCalculator.calculateAndDisplaySize(
                 gamePath, () -> runOnUiThread(this::updateDirectorySizeUI));
-        if (!isSignatureValid()) {
+        /*if (!isSignatureValid()) {
             showSignatureErrorDialog();
-        }
+        }*/
     }
 
     private void updateDirectorySizeUI() {
@@ -258,54 +258,46 @@ public class MainActivity extends AppCompatActivity {
         int colorUnselected = ContextCompat.getColor(this, R.color.apple_switch_track_color);
         int colorSelected = ContextCompat.getColor(this, R.color.colorPrimary);
         ColorStateList colorStateList = new ColorStateList(
-        new int[][]{
-                new int[]{android.R.attr.state_selected}, // 选中状态
-                new int[]{-android.R.attr.state_selected} // 未选中状态
-        },
-        new int[]{
-                Color.WHITE, // 选中状态颜色
-                Color.GRAY // 未选中状态颜色
-        });
+                new int[][]{
+                        new int[]{android.R.attr.state_selected}, // 选中状态
+                        new int[]{-android.R.attr.state_selected} // 未选中状态
+                },
+                new int[]{
+                        Color.WHITE, // 选中状态颜色
+                        Color.GRAY // 未选中状态颜色
+                });
         tabLayoutV.setTabIconTint(colorStateList);
         tabLayoutV.setSelectedTabIndicatorColor(getResources().getColor(R.color.bilibili_pink));
         tabLayoutV.setTabTextColors(colorUnselected, colorSelected);
         tabLayoutV.setBackground(null);
         tabLayoutV.setTabRippleColor(ColorStateList.valueOf(Color.TRANSPARENT));
         new VerticalTabLayoutMediator(
-        tabLayoutV,
-        viewPager,
-        (tab, position) -> {
-            String[] tabTitles = {
-                    getString(R.string.tab_main_activity),
-                    getString(R.string.tab_other_activity),
-                    getString(R.string.tab_options_activity),
-                    getString(R.string.daily)
-            };
-            int[] tabIcons = {
-                    R.drawable.ic_tab_hone,
-                    R.drawable.ic_tab_web,
-                    R.drawable.ic_tab_opt,
-                    R.drawable.baseline_edit_24
-            };
-            tab.setText(tabTitles[position]);
-            tab.setIcon(tabIcons[position]);
-        })
+                tabLayoutV,
+                viewPager,
+                (tab, position) -> {
+                    String[] tabTitles = {
+                            getString(R.string.tab_main_activity),
+                            getString(R.string.tab_other_activity),
+                            getString(R.string.tab_options_activity),
+                            getString(R.string.daily)
+                    };
+                    int[] tabIcons = {
+                            R.drawable.ic_tab_hone,
+                            R.drawable.ic_tab_web,
+                            R.drawable.ic_tab_opt,
+                            R.drawable.baseline_edit_24
+                    };
+                    tab.setText(tabTitles[position]);
+                    tab.setIcon(tabIcons[position]);
+                })
                 .attach();
-        //  throw new RuntimeException("This is a test crash! utf-8 zh_CN 抛出错误异常测试");
     }
 
     private boolean isSignatureValid() {
         try {
-            PackageInfo packageInfo = getPackageManager()
-                    .getPackageInfo(
-                            getPackageName(),
-                            Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
-                                    ? PackageManager.GET_SIGNING_CERTIFICATES
-                                    : PackageManager.GET_SIGNATURES);
+            PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), Build.VERSION.SDK_INT >= Build.VERSION_CODES.P ? PackageManager.GET_SIGNING_CERTIFICATES : PackageManager.GET_SIGNATURES);
 
-            Signature[] signatures = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
-                    ? packageInfo.signingInfo.getApkContentsSigners()
-                    : packageInfo.signatures;
+            Signature[] signatures = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P ? packageInfo.signingInfo.getApkContentsSigners() : packageInfo.signatures;
 
             for (Signature signature : signatures) {
                 if (VALID_SIGNATURE.equals(computeSHA256(signature.toByteArray()))) {
@@ -338,63 +330,12 @@ public class MainActivity extends AppCompatActivity {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_signature_error, null);
         AlertDialog dialog = new AlertDialog.Builder(this).setView(dialogView).setCancelable(false).create();
 
-        dialogView
-                .findViewById(R.id.dialog_button_exit)
-                .setOnClickListener(
-                        v -> {
-                            dialog.dismiss();
-                            finish();
-                            System.exit(0); // 确保应用程序完全退出
-                        });
+        dialogView.findViewById(R.id.dialog_button_exit).setOnClickListener(v -> {
+            dialog.dismiss();
+            finish();
+            System.exit(0); // 确保应用程序完全退出
+        });
 
         dialog.show();
     }
-
-    /*package com.example.timerapp;
-
-    import androidx.appcompat.app.AppCompatActivity;
-    import android.content.SharedPreferences;
-    import android.os.Bundle;
-    import android.os.SystemClock;
-    import android.widget.TextView;
-
-    public class MainActivity extends AppCompatActivity {
-
-        private static final String PREFS_NAME = "TimerPrefs";
-        private static final String KEY_TOTAL_TIME = "TotalTime";
-        private long startTime;
-        private long accumulatedTime;
-
-        private TextView timerTextView;
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-
-            timerTextView = findViewById(R.id.timerTextView);
-
-            // 从 SharedPreferences 中获取累积时间
-            SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-            accumulatedTime = prefs.getLong(KEY_TOTAL_TIME, 0);
-
-            // 显示累计时间
-            updateTimerText();
-
-            // 开始计时
-            startTime = SystemClock.elapsedRealtime();
-        }
-
-        @Override
-        protected void onPause() {
-            super.onPause();
-            saveElapsedTime();
-        }
-
-        @Override
-        protected void onStop() {
-            super.onStop();
-            saveElapsedTime();
-        }*/
-
 }

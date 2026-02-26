@@ -8,8 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- 显示通知 -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <!-- 运行前台服务 -->
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <!-- 录音 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- 修改或删除您共享存储空间中的内容 -->
@@ -25,10 +23,6 @@
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
-    <uses-feature
-        android:name="android.hardware.touchscreen"
-        android:required="true" />
-
 
     <application
         android:allowBackup="true"
@@ -44,32 +38,19 @@
         android:supportsRtl="true"
         android:usesNonSdkApi="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".SplashActivity"
-            android:resizeableActivity="false"
+            android:name="zzh.source.srceng.ui.activity.MainActivity"
+            android:resizeableActivity="true"
             android:screenOrientation="sensorLandscape"
             android:launchMode="singleTask"
-            android:exported="false">
+            android:exported="true">
 
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN" />
                 <category
                     android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:resizeableActivity="true"
-            android:screenOrientation="sensorLandscape"
-            android:launchMode="singleTask"
-            android:exported="false">
-
-            <intent-filter>
-                <action
-                    android:name="android.intent.action.DIRCH" />
-                <category
-                    android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -107,10 +88,6 @@
             android:launchMode="singleTask"
             android:resizeableActivity="false"
             android:exported="false" />
-        <service
-            android:name="zzh.until.update.UpdateService"
-            android:exported="false"
-            android:stopWithTask="false" />
         <meta-data
             android:name="android.max_aspect"
             android:value="9999.0" />

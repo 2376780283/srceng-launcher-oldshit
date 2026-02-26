@@ -14,7 +14,7 @@
         android:id="@+id/body_main">
 
         <!-- VerticalTabLayout 位于顶部 -->
-        <com.zzh.widget.tablayout.VerticalTabLayout
+        <zzh.source.srceng.ui.widget.tablayout.VerticalTabLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:tabMode="auto"

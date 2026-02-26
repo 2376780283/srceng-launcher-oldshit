@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:id="@+id/coordinator">
-    <com.zzh.widget.Mouse.ImprovemView
+    <zzh.source.srceng.ui.widget.mouse.ImprovemView
         android:id="@+id/followImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -62,7 +62,7 @@
                     android:layout_gravity="center_vertical"
                     android:text="模拟光标" />
 
-                <com.zzh.widget.SwitchFlyView.SwitchView
+                <zzh.source.srceng.ui.widget.customswitch.SwitchView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     app:primaryColor="@color/hl_color"
@@ -92,7 +92,7 @@
                     android:layout_gravity="center_vertical"
                     android:text="调试SDL" />
 
-                <com.zzh.widget.SwitchFlyView.SwitchView
+                <zzh.source.srceng.ui.widget.customswitch.SwitchView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     app:primaryColor="@color/hl_color"

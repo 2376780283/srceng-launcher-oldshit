@@ -18,7 +18,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.view.animation.Animation; // 动画组件，删除可能影响整个源代码加载
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -88,6 +88,7 @@ import zzh.source.srceng.ui.widget.blur.BlurAlgorithm;
 import zzh.source.srceng.ui.widget.blur.BlurView;
 import zzh.source.srceng.ui.widget.blur.RenderEffectBlur;
 import zzh.source.srceng.ui.widget.blur.RenderScriptBlur;
+import zzh.source.srceng.ui.dialog.BottomSheetDialogFragment;
 import android.os.SystemClock;
 import java.io.IOException;
 import android.content.res.AssetFileDescriptor; // 调取资源和
