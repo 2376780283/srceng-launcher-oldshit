@@ -78,7 +78,7 @@ public class HomeActivity extends Fragment {
     }
 
     private void initColors() {
-        
+
         colorUnselected = ContextCompat.getColor(requireContext(), R.color.apple_switch_track_color);
         colorSelected = ContextCompat.getColor(requireContext(), R.color.colorPrimary);
         colorStateList = new ColorStateList(

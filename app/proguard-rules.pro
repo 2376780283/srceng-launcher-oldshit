@@ -1,8 +1,1 @@
 -keep class org.libsdl.app.** { *; }
--keep class com.zzh.** { *; }
--keep class * extends androidx.fragment.app.Fragment { *; }
--keep class * extends android.app.Dialog { *; }
--keep class androidx.** { *; }
--keep class com.google.android.material.** { *; }
--keep class * extends androidx.fragment.app.BottomSheetDialogFragment { *; }
--keep class zzh.** { *; } 
