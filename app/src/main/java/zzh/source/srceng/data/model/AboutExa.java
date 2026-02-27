@@ -106,42 +106,37 @@ public class AboutExa extends Fragment {
         });
   }
 
-  private List<ListItem> loadItems(String addonInfoContent) {
-    List<ListItem> items = new ArrayList<>();
-    // 添加开发者信息项
-    items.add(new DeveloperItem("ZZH LIFE", "启动器开发者", R.drawable.zzhlife));
-    items.add(new DeveloperItem("Carl-Y HH45137", "为启动器作出贡献", R.drawable.builder_one));
-    items.add(new DeveloperItem("Nillerusr", "提供启动器代码", R.drawable.builder_two));
-    items.add(new DeveloperItem("stephen-cusi", "为启动器作出贡献", R.drawable.builder_three));
+    private List<ListItem> loadItems(String addonInfoContent) {
+        List<ListItem> items = new ArrayList<>();
+        // 添加开发者信息项
+        items.add(new DeveloperItem("ZZH LIFE", "启动器开发者", R.drawable.zzhlife));
+        items.add(new DeveloperItem("Carl-Y HH45137", "为启动器作出贡献", R.drawable.builder_one));
+        items.add(new DeveloperItem("Nillerusr", "提供启动器代码", R.drawable.builder_two));
+        items.add(new DeveloperItem("stephen-cusi", "为启动器作出贡献", R.drawable.builder_three));
+        items.add(
+                new LauncherUsageItem(
+                        "关于illerusr",
+                        "\n特別感謝：\nillerusr 製作的 port 程式\nvalve 製作的起源引擎\n\n不得用於商業用途！\n\n給作者打賞點小錢：https://new.donatepay.ru/@nillerusr\nBTC(Bitcoin): bc1qnjq92jj9uqjtafcx2zvnwd48q89hgtd6w8a6na\nXMR(Monero): 48iXvX61MU24m5VGc77rXQYKmoww3dZh6hn7mEwDaLVTfGhyBKq2teoPpeBq6xvqj4itsGh6EzNTzBty6ZDDevApCFNpsJg",
+                        R.drawable.card_view_tabbg));
 
-    // 添加启动器使用方法项
-    items.add(
-        new LauncherUsageItem(
-            "关于illerusr",
-            "\n特別感謝：\nillerusr 製作的 port 程式\nvalve 製作的起源引擎\n\n不得用於商業用途！\n\n給作者打賞點小錢：https://new.donatepay.ru/@nillerusr\nBTC(Bitcoin): bc1qnjq92jj9uqjtafcx2zvnwd48q89hgtd6w8a6na\nXMR(Monero): 48iXvX61MU24m5VGc77rXQYKmoww3dZh6hn7mEwDaLVTfGhyBKq2teoPpeBq6xvqj4itsGh6EzNTzBty6ZDDevApCFNpsJg",
-            R.drawable.card_view_tabbg));
+        items.add(new LauncherUsageItem("关于启动器", "由ZZH 制作 并修改 没什么好说的 \n lib版本：1.17.26", R.drawable.zzhlife));
 
-    items.add(new LauncherUsageItem("关于启动器", "由ZZH 制作 并修改 没什么好说的 \n lib版本：1.17.26", R.drawable.zzhlife));
-
-    return items;
-  }
-
-  // 点击开发者信息项时的处理逻辑
+        return items;
+    }
   private void onDeveloperClick(View v) {
     // 处理开发者 item 点击事件的逻辑
   }
 
   // 点击启动器使用方法项时的处理逻辑
   private void onLauncherClick(View v) {
-    // 处理启动器 item 点击事件的逻辑
+
   }
 
-  @Override
-  public void onDestroyView() {
-    super.onDestroyView();
-    // 关闭 ExecutorService，避免内存泄漏
-    if (executorService != null && !executorService.isShutdown()) {
-      executorService.shutdown();
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (executorService != null && !executorService.isShutdown()) {
+            executorService.shutdown();
+        }
     }
-  }
 }

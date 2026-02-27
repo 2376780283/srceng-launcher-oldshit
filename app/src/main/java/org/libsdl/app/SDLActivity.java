@@ -393,57 +393,8 @@ public class SDLActivity extends AppCompatActivity
         // Only record current orientation
         SDLActivity.onNativeOrientationChanged(mCurrentOrientation);
 
-        try {
-            if (Build.VERSION.SDK_INT < 24) {
-                mCurrentLocale = getContext().getResources().getConfiguration().locale;
-            } else {
-                mCurrentLocale = getContext().getResources().getConfiguration().getLocales().get(0);
-            }
-        } catch (Exception ignored) {
-        }
         setWindowStyle(true);
-        setContentView(mLayout); // 开启渲染
-        SharedPreferences checkbox_play_video =
-                getSharedPreferences("CheckboxPreferences", Context.MODE_PRIVATE);
-        boolean isChecked_on = checkbox_play_video.getBoolean("checkbox_play_video", false);
-        if (isChecked_on) {
-            playVideo();
-        }
-        ViewGroup rootView = (ViewGroup) getWindow().getDecorView().getRootView();
-        LayoutInflater inflater = getLayoutInflater();
-        View additionalLayout = inflater.inflate(R.layout.additional_layout, rootView, false);
-        rootView.addView(additionalLayout);
-
-        SharedPreferences checkbox_immersive_mode =
-                getSharedPreferences("CheckboxPreferences", Context.MODE_PRIVATE);
-        boolean isChecked = checkbox_immersive_mode.getBoolean("checkbox_immersive_mode", false);
-        startTime = SystemClock.elapsedRealtime();
-        if (isChecked) {
-            btnCenter = additionalLayout.findViewById(R.id.btnCenter);
-            btnCenter.setVisibility(View.GONE);
-        } else {
-            btnCenter = additionalLayout.findViewById(R.id.btnCenter);
-            btnCenter.setVisibility(View.VISIBLE);
-        }
-        ImprovemView = findViewById(R.id.followImageView);
-
-        btnCenter = additionalLayout.findViewById(R.id.btnCenter);
-        final PopupWindow[] rightPopup = {null};
-        btnCenter.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Button clickedButton = additionalLayout.findViewById(R.id.btnCenter);
-                        if (rightPopup[0] != null && rightPopup[0].isShowing()) {
-                        } else {
-                            BottomSheetDialogFragment bottomSheetFragment =
-                                    new BottomSheetDialogFragment(ImprovemView);
-                            bottomSheetFragment.show(
-                                    getSupportFragmentManager(), "MyBottomSheetDialogFragment");
-                        }
-                    }
-                });
-
+        setContentView(mLayout);
         if (intent != null && intent.getData() != null) {
             String filename = intent.getData().getPath();
             if (filename != null) {
@@ -451,13 +402,6 @@ public class SDLActivity extends AppCompatActivity
                 SDLActivity.onNativeDropFile(filename);
             }
         }
-
-        ImprovemView.setVisibility(View.GONE);
-        sharedPreferences_mouse = getSharedPreferences("myPrefs", MODE_PRIVATE);
-        ImprovemView.setVisibility(
-                sharedPreferences_mouse.getBoolean(SWITCH_STATE_M, false)
-                        ? View.VISIBLE
-                        : View.GONE);
     }
 
     protected void pauseNativeThread() {
@@ -1169,62 +1113,6 @@ public class SDLActivity extends AppCompatActivity
        // outtime.setText("累计时间: " + seconds + " 秒");
     }
 
-    private void playVideo() {
-        mPref = getSharedPreferences("mod", 0);
-        String directoryPath =
-                mPref.getString("gamepath", MainActivity.getDefaultDir() + "/srceng")
-                        + "/hl2/media/";
-        String fileName = "valve.mp4";
-        File file = new File(directoryPath, fileName);
-        ConstraintLayout videoLayout = new ConstraintLayout(this);
-        videoLayout.setLayoutParams(
-                new ConstraintLayout.LayoutParams(
-                        ConstraintLayout.LayoutParams.MATCH_PARENT,
-                        ConstraintLayout.LayoutParams.MATCH_PARENT));
-        VideoView videoView = new VideoView(this);
-        videoView.setLayoutParams(
-                new ConstraintLayout.LayoutParams(
-                        ConstraintLayout.LayoutParams.MATCH_PARENT,
-                        ConstraintLayout.LayoutParams.MATCH_PARENT));
-        if (file.exists()) {
-            Uri videoUri = Uri.fromFile(file);
-            videoView.setVideoURI(videoUri);
-        } else {
-            Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.valve);
-            videoView.setVideoURI(videoUri);
-        }
-        videoLayout.addView(videoView);
-        mLayout.addView(videoLayout);
-        videoView.setOnPreparedListener(
-                new MediaPlayer.OnPreparedListener() {
-                    @Override
-                    public void onPrepared(MediaPlayer mp) {
-                        float videoRatio = (float) mp.getVideoWidth() / mp.getVideoHeight();
-                        float screenRatio = (float) videoView.getWidth() / videoView.getHeight();
-                        float scaleX = videoRatio / screenRatio;
-                        if (scaleX >= 1.0f) {
-                            videoView.setScaleX(scaleX);
-                        } else {
-                            videoView.setScaleY(1.0f / scaleX);
-                        }
-                    }
-                });
-        videoView.setOnCompletionListener(
-                new MediaPlayer.OnCompletionListener() {
-                    @Override
-                    public void onCompletion(MediaPlayer mp) {
-                        mLayout.removeView(videoLayout);
-                    }
-                });
-        videoView.start();
-    }
-
-    /*
-     *关键更改点：
-     *从 assets 目录加载视频：当 file.exists() 返回 false 时，代码会尝试从 assets 目录中加载 valve.mp4 文件。注意，AssetFileDescriptor 需要通过 getAssets().openFd() 获取。
-     * 异常处理：加载 assets/valve.mp4 时使用 try-catch 块来处理可能的 IOException 异常，并在失败时显示一个 Toast 消息。
-     * 这个修改确保了当指定路径下的视频文件不存在时，应用会回退到播放 assets 目录中的 valve.mp4 视频。
-     */
     /** This method is called by SDL using JNI. */
     public static boolean supportsRelativeMouse() {
         // DeX mode in Samsung Experience 9.0 and earlier doesn't support relative mice properly
